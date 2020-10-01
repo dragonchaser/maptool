@@ -39,6 +39,9 @@ Usage: ./maptool.rb [options]
     -h, --help                       Prints this help
 ```
 
+## Web Interface usage
+To start the server, run `ruby app.rb` To view the interface, navigate to `localhost:4567`
+
 ## examples
 
 ### with border

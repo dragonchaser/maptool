@@ -6,3 +6,13 @@ gemspec
 gem "rake", "~> 12.0"
 gem "rspec", "~> 3.0"
 gem "json", "~> 2.3"
+
+gem 'sassc' # css preprocessor
+gem 'sinatra' # ruby server
+gem 'slim' # html templating language
+gem 'thin' # ruby server engine
+
+group :development, :test do
+  gem 'pry'
+  gem 'sinatra-contrib'
+end
