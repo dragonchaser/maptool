@@ -1,0 +1,21 @@
+h1 Nethack style ASCII dungeons
+
+form action='/generate' method='post'
+  .form-group
+    label for='columns' Dungeon Columns
+    input.form-control#columns type='number' value='10'
+  .form-group
+    label for='rows' Dungeon Rows
+    input.form-control#rows type='number' value='10'
+  .form-group
+    label for='empty_probability' Probablility of creating an empty tile
+    input.form-control#empty_probability type='number' value='0.02'
+  .form-group
+    label for='precicion' Precision used for calculationg weighted probablities with an empty tile
+    input.form-control#precicion type='number' value='2' min="2" max="14"
+  .form-group.form-check
+    input.form-check-input#print_border type='checkbox'
+    label.form-check-label for="print_border" Print tile border
+
+  .flex.justify-end
+    button.btn.btn-primary type='submit' Generate

@@ -1,0 +1,144 @@
+@import 'normalize';
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+$black: black;
+$white: white;
+$offwhite: #ced4da;
+
+body {
+  font-family: Helvetica;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+// Header
+
+.header {
+  background-color: $black;
+  height: 64px;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+
+  .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.brand {
+  color: $white;
+  margin-left: 16px;
+  // font-size: 22px;
+}
+
+// Sticky Footer
+.body {
+  flex: 1;
+}
+
+.footer {
+  background-color: $black;
+  color: $white;
+  font-size: 0.8rem;
+  padding: 10px;
+}
+// Sticky Footer End
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+// Form
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-check {
+  position: relative;
+  display: block;
+  padding-left: 1.25rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $black;
+  background-color: $white;
+  background-clip: padding-box;
+  border: 1px solid $offwhite;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.form-check-label {
+  margin-bottom: 0;
+}
+
+.form-check-input {
+  position: absolute;
+  margin-top: .3rem;
+  margin-left: -1.25rem;
+}
+
+// Form End
+
+// Buttons
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: $black;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: $white;
+  background-color: $black;
+  border-color: $black;
+}
+
+// Buttons End
+
+// Utilities
+
+.flex {
+  display: flex;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+// Utilities End
