@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require './lib/maptool.rb'
+require 'maptool'
 require 'optparse'
 
 args = Hash.new
