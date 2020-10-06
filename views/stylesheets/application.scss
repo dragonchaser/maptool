@@ -59,6 +59,7 @@ label {
 .container {
   max-width: 1280px;
   margin: auto;
+  padding: 0 10px;
 }
 
 // Form
@@ -141,4 +142,24 @@ label {
   justify-content: flex-end;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 // Utilities End
+
+// Panel
+
+.panel {
+  background-color: $offwhite;
+  border-radius: 10px;
+  padding: 10px;
+  overflow: scroll;
+  margin: 20px auto;
+  max-width: 500px;
+  max-height: 500px;
+  text-align: center;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+}
+
+// Panel End

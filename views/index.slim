@@ -21,5 +21,26 @@ form action='/generate' method='post'
     button.btn.btn-primary type='submit' Generate
 
 - if map_tool
-  pre.panel
+
+  .flex.justify-center
+    button.btn onclick="CopyToClipboard()" Copy to clipboard
+  pre.panel#output-panel
     = map_tool.print_web_map
+
+javascript:
+  function CopyToClipboard(containerid) {
+    const container = document.getElementById('output-panel')
+
+    if (document.selection) {
+      var range = document.body.createTextRange();
+      range.moveToElementText(container);
+      range.select().createTextRange();
+      document.execCommand("copy");
+    } else if (window.getSelection) {
+      var range = document.createRange();
+      range.selectNode(container);
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      alert("Map copied to clipboard.")
+    }
+  }
