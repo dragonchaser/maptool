@@ -1,11 +1,8 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
 require 'sass'
-require 'slim'
 
 require_relative 'lib/maptool.rb'
-
-Slim::Engine.set_default_options pretty: true
 
 # Parse Sass styles
 class SassHandler < Sinatra::Base
@@ -47,12 +44,8 @@ class MyApp < Sinatra::Base
     precision = 2 if precision < 2
     print_border = params[:print_border] == 'on' || false
 
-    # print "Params: #{params}"
-
     map_tool = Maptool.new(cols, rows, empty_weight, precision, print_border)
     map_tool.run!
-
-    # print map_tool.print_web_map
 
     slim :index, locals: { map_tool: map_tool, params: params }
   end
