@@ -110,6 +110,32 @@ class Maptool
     end
   end
 
+  def print_web_map
+    map_string = ''
+    if @border
+      (0..(@tile_w * (@cols + 1)) + @cols + 1).each { |_d| map_string.concat('.') }
+      map_string.concat("\n")
+    end
+    (0..@rows).each do |r|
+      (0..@tile_h).each do |th|
+        map_string.concat('.') if @border
+        (0..@cols).each do |c|
+          if @border
+            map_string.concat("#{@items[@map[r][c].to_s][:data][th].to_s.ljust(@tile_w, "\ ")}.")
+          else
+            map_string.concat("#{@items[@map[r][c].to_s][:data][th].to_s.ljust(@tile_w, "\ ")}")
+          end
+        end
+        map_string.concat("\n")
+      end
+      if @border
+        (0..(@tile_w * (@cols + 1)) + @cols + 1).each { |_d| map_string.concat('.') }
+        map_string.concat("\n")
+      end
+    end
+    map_string
+  end
+
   # Code credited to https://stackoverflow.com/users/1288687/knugie from https://stackoverflow.com/questions/4463561/weighted-random-selection-from-array
   def weighted_rand(weights = {})
     raise 'Probabilities must sum up to 1' unless weights.values.sum == 1.0
