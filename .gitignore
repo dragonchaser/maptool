@@ -9,5 +9,8 @@
 
 .byebug_history
 
+# untrack built gem
+*.gem
+
 # rspec failure tracking
 .rspec_status
