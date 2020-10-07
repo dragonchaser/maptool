@@ -1,1 +1,16 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+
 .byebug_history
+
+# untrack built gem
+*.gem
+
+# rspec failure tracking
+.rspec_status
