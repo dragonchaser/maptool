@@ -4,7 +4,7 @@ Gem::Specification.new do |spec|
   spec.name          = "maptool"
   spec.version       = Maptool::VERSION
   spec.authors       = ["Christian Richter, Elliott HEBERT"]
-  spec.email         = ["elliott.hebert.pro@gmail.com"]
+  spec.email         = ["gems(a.t.)datenschmutz.space","elliott.hebert.pro@gmail.com"]
 
   spec.summary       = %q{Maptool is a small tool to generate nethack-style ASCII dungeons. It is a WIP at the moment so expect breaking changes and bugs.}
   spec.homepage      = "https://github.com/dragonchaser/maptool"
