@@ -1,0 +1,46 @@
+h1 Nethack style ASCII dungeons
+
+form action='/generate' method='post'
+  .form-group
+    label for='columns' Dungeon Columns
+    input.form-control#columns name='columns' type='number' value=params[:columns]
+  .form-group
+    label for='rows' Dungeon Rows
+    input.form-control#rows name='rows' type='number' value=params[:rows]
+  .form-group
+    label for='empty_probability' Probablility of creating an empty tile
+    input.form-control#empty_probability name='empty_probability' type='number' step='0.01' value=params[:empty_probability]
+  .form-group
+    label for='precision' Precision used for calculationg weighted probablities with an empty tile
+    input.form-control#precision name='precision' type='number' value=params[:precision] min="2" max="14"
+  .form-group.form-check
+    input.form-check-input#print_border name='print_border' type='checkbox' value=params[:print_border]
+    label.form-check-label for="print_border" Print tile border
+
+  .flex.justify-end
+    button.btn.btn-primary type='submit' Generate
+
+- if map_tool
+
+  .flex.justify-center
+    button.btn onclick="CopyToClipboard()" Copy to clipboard
+  pre.panel#output-panel
+    = map_tool.print_web_map
+
+javascript:
+  function CopyToClipboard(containerid) {
+    const container = document.getElementById('output-panel')
+
+    if (document.selection) {
+      var range = document.body.createTextRange();
+      range.moveToElementText(container);
+      range.select().createTextRange();
+      document.execCommand("copy");
+    } else if (window.getSelection) {
+      var range = document.createRange();
+      range.selectNode(container);
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      alert("Map copied to clipboard.")
+    }
+  }
