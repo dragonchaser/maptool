@@ -51,4 +51,4 @@ class MyApp < Sinatra::Base
   end
 end
 
-MyApp.run! port: 4567 if $PROGRAM_NAME == __FILE__
+MyApp.run! port: 4567, bind: "0.0.0.0" if $PROGRAM_NAME == __FILE__
