@@ -44,9 +44,17 @@ To start the server, run `ruby app.rb` To view the interface, navigate to `local
 
 ## Docker
 
+### x86_64
+
 ```
     $> docker run -p4567:4567 dragonchaser/maptool:latest
 ```
+### arm32v7
+
+```
+    $> docker run -p4567:4567 dragonchaser/maptool:latest-arm32v7
+```
+
 
 ### Build
 
