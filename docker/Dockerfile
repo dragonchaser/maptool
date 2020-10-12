@@ -1,0 +1,7 @@
+FROM ruby:latest
+LABEL maintainer="dragonchaser <maptool@datenschmutz.space>"
+EXPOSE 4567
+RUN git clone https://github.com/dragonchaser/maptool /maptool
+WORKDIR /maptool
+RUN bundle install
+CMD ["ruby", "app.rb"]

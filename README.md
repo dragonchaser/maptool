@@ -42,6 +42,20 @@ Usage: ./maptool.rb [options]
 ## Web Interface usage
 To start the server, run `ruby app.rb` To view the interface, navigate to `localhost:4567`
 
+## Docker
+
+```
+    $> docker run -p4567:4567 dragonchaser/maptool:latest
+```
+
+### Build
+
+```
+    $> cd docker
+    $> docker build -t <containername>:<tag>
+    $> # run it
+    $> docker run -p4567:4567 <containername>:tag
+```
 ## examples
 
 ### with border
