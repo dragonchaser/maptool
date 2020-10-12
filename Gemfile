@@ -7,6 +7,7 @@ gem "rake", "~> 12.0"
 gem "rspec", "~> 3.0"
 gem "json", "~> 2.3"
 
+gem 'sass'
 gem 'sassc' # css preprocessor
 gem 'sinatra' # ruby server
 gem 'slim' # html templating language
