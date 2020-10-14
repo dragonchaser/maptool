@@ -1,4 +1,4 @@
-FROM ruby:latest
+FROM arm32v7/ruby:latest
 COPY qemu-arm-static /usr/bin
 LABEL maintainer="dragonchaser <maptool@datenschmutz.space>"
 EXPOSE 4567
