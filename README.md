@@ -59,8 +59,7 @@ To start the server, run `ruby app.rb` To view the interface, navigate to `local
 ### Build
 
 ```
-    $> cd docker
-    $> docker build -t <containername>:<tag>
+    $> docker build -f docker/Dockerfile -t <containername>:<tag> .
     $> # run it
     $> docker run -p4567:4567 <containername>:tag
 ```
