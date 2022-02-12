@@ -5,7 +5,7 @@ gemspec
 
 gem "rake", "~> 12.0"
 gem "rspec", "~> 3.0"
-gem "json", "~> 2.3"
+gem "json", "~> 2.6"
 
 gem 'sass'
 gem 'sassc' # css preprocessor
