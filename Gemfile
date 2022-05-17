@@ -9,7 +9,7 @@ gem "json", "~> 2.6"
 
 gem 'sass'
 gem 'sassc' # css preprocessor
-gem 'sinatra' # ruby server
+gem 'sinatra', ">=2.2.0" # ruby server
 gem 'slim' # html templating language
 gem 'thin' # ruby server engine
 
