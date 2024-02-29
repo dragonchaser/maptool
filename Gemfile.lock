@@ -11,7 +11,7 @@ GEM
     diff-lcs (1.5.0)
     eventmachine (1.2.7)
     ffi (1.13.1)
-    json (2.6.2)
+    json (2.7.1)
     method_source (1.0.0)
     multi_json (1.15.0)
     mustermann (1.1.2)
@@ -72,7 +72,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  json (~> 2.6)
+  json (~> 2.7)
   maptool!
   pry
   rake (~> 13.0)
