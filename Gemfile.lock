@@ -22,7 +22,7 @@ GEM
     rack (2.2.4)
     rack-protection (2.2.1)
       rack
-    rake (13.0.6)
+    rake (13.1.0)
     rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -75,7 +75,7 @@ DEPENDENCIES
   json (~> 2.6)
   maptool!
   pry
-  rake (~> 13.0)
+  rake (~> 13.1)
   rspec (~> 3.11)
   sass
   sassc

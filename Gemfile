@@ -3,7 +3,7 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in maptool.gemspec
 gemspec
 
-gem "rake", "~> 13.0"
+gem "rake", "~> 13.1"
 gem "rspec", "~> 3.11"
 gem "json", "~> 2.6"
 
